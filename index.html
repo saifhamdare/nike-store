@@ -1,178 +1,537 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>shop Cart</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-light">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-10 col-11 mx-auto">
-                <div class="row mt-5 gx-3">
-                    <!-- left side Div -->
-                    <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow p-lg-4">
-                        <div class="card p4">
-                            <h2 class="py-4 font-weight-bold">Cart (2 Item)</h2>
-                            <div class="row">
-                                <!-- card Image div -->
-                                <div
-                                    class="col-md-5 col-11 mx-auto bg-light p-lg-0 d-flex justify-content-center align-item-center shadow product_img">
-                                    <img src="images/blue.jpg" class="img-fluid" alt="green Tshirt">
-                                </div>
-                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
-                                    <div class="row">
-                                        <!-- product Name -->
-                                        <div class="col-6 card-title">
-                                            <h1 class="mb-4 product_name">Blue T-shirt</h1>
-                                            <p class="mb-2">Shirt - Blue</p>
-                                            <p class="mb-2">Color: Blue</p>
-                                            <p class="mb-2">Size: M</p>
-                                        </div>
-                                        <div class="col-6">
-                                            <ul class="pagination justify-content-end set_quantity">
-                                                <li class="page-item"><button class="page-link"
-                                                        onclick="decreaseNumber('textbox','itemval')"><i class="fas fa-minus"></i></button>
-                                                </li>
-                                                <li class="page-item"><input type="text" class="page-link" value="0"
-                                                        id="textbox"></li>
-                                                <li class="page-item"><button class="page-link"
-                                                        onclick="increaseNumber('textbox','itemval')"><i class="fas fa-plus"></i></button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-8 d-flex justify-content-between remove_wish">
-                                            <p><i class="fas fa-trash-alt"></i>Remove Item</p>
-                                            <p><i class="fas fa-heart"></i>Move to wishlist</p>
-                                        </div>
-                                        <div class="col-4 d-flex justify-content-end price_money">
-                                            <h3>$<span id="itemval">0.00</span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <!-- product 2  -->
-                        <div class="card p4">
+<body>
 
-                            <div class="row">
-                                <!-- card Image div -->
-                                <div
-                                    class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-item-center shadow product_img">
-                                    <img src="images/red.jpg" class="img-fluid" alt="green Tshirt">
-                                </div>
-                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
-                                    <div class="row">
-                                        <!-- product Name -->
-                                        <div class="col-6 card-title">
-                                            <h1 class="mb-4 product_name">Red T-shirt</h1>
-                                            <p class="mb-2">Shirt - Red</p>
-                                            <p class="mb-2">Color: Red</p>
-                                            <p class="mb-2">Size: M</p>
-                                        </div>
-                                        <div class="col-6">
-                                            <ul class="pagination justify-content-end set_quantity">
-                                                <li class="page-item"><button class="page-link"
-                                                        onclick="decreaseNumber('textbox1','itemval1')"><i class="fas fa-minus"></i></button>
-                                                </li>
-                                                <li class="page-item"><input type="text" class="page-link" value="0"
-                                                        id="textbox1"></li>
-                                                <li class="page-item"><button class="page-link"
-                                                        onclick="increaseNumber('textbox1','itemval1')"><i class="fas fa-plus"></i></button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-8 d-flex justify-content-between remove_wish">
-                                            <p><i class="fas fa-trash-alt"></i>Remove Item</p>
-                                            <p><i class="fas fa-heart"></i>Move to wishlist</p>
-                                        </div>
-                                        <div class="col-4 d-flex justify-content-end price_money">
-                                            <h3>$<span id="itemval1">0.00</span></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Right Side Div -->
-                    <div class="col-md-11 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
-                        <div class="right_side p-3 shadow bg-white">
-                            <h2 class="product_name mb-5">The total Amount of</h2>
-                            <div class="price_indiv d-flex justify-content-between">
-                                <p>product Amount</p>
-                                <p>$ <span id="product_total_amount">0.00</span></p>
-                            </div>
-                            <div class="price_indiv d-flex justify-content-between">
-                                <p>Shipping Charge</p>
-                                <p>$ <span id="shipping_charge">50.00</span></p>
-                            </div>
-                            <hr>
-                            <div class="total_amt d-flex justify-content-between font-weight-bold">
-                                <p>The total amount of (including VAT)</p>
-                                <p>$ <span id="total_cart_amt">0.00</span></p>
-                            </div>
-                            <button class="btn btn-primary ">CHECKOUT</button>
-                        </div>
-                        <div class="discount_code mt-3 shadow">
-                            <div class="card">
-                                <div class="card-body">
-                                    <a class="d-flex justify-conetnt-between " data-bs-toggle="collapse"
-                                        href="#collapseExample" role="button" aria-expanded="false"
-                                        aria-controls="collapseExample">
-                                        Add a discount code (optional)
-                                        <span><i class="fas fa-chevron-down pt-1"></i></span>
-                                    </a>
+    <!-- header section start -->
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="" class="logo">nike</a>
+        <nav class="navbar">
 
+            <a href="#home">home</a>
+            <a href="#products">products</a>
+            <a href="#featured">features</a>
+            <a href="#review">review</a>
+        </nav>
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
 
-                                    <div class="collapse" id="collapseExample">
+        </div>
+    </header>
+    <!-- header section end -->
 
-                                        <div class="mt-3">
-                                            <input type="text" name="" id="discount_code1"
-                                                class="form-control font-weight-bold"
-                                                placeholder="Enter the discount code" >
-                                            <small id="error_trw" class="text-dark mt-3">code is 'OFF100'</small>
-                                        </div>
-                                        <button class="btn btn-primary btn-sm mt-3"
-                                            onclick="discount_code()">Apply</button>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                        </div>
-                            <!-- discount -->
-                            <div class="mt-3 shadow p-3 bg-white">
-                                <div class="pt-4">
-                                    <h5 class="mb-4">Expected Delivery date</h5>
-                                    <p class="mb-4">November 25th 2021 - November 30th 2021</p>
-                                </div>
-                            </div>
-                    </div>
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="content">
+                    <span>nike red Shoes</span>
+                    <h3>Nike metcon shoes</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, alias nisi provident similique
+                        ducimus rem dolores velit qui eos ratione.</p>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+                <div class="image">
+                    <img src="images/home-shoe-1.png" alt="" class="shoe">
+                    <img src="images/home-text-1.png" alt="" class="text">
                 </div>
             </div>
         </div>
+
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <span>nike blue Shoes</span>
+                    <h3>Nike metcon shoes</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, alias nisi provident similique
+                        ducimus rem dolores velit qui eos ratione.</p>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+                <div class="image">
+                    <img src="images/home-shoe-2.png" alt="" class="shoe">
+                    <img src="images/home-text-2.png" alt="" class="text">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <span>nike Yellow Shoes</span>
+                    <h3>Nike metcon shoes</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, alias nisi provident similique
+                        ducimus rem dolores velit qui eos ratione.</p>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+                <div class="image">
+                    <img src="images/home-shoe-3.png" alt="" class="shoe">
+                    <img src="images/home-text-3.png" alt="" class="text">
+                </div>
+            </div>
+        </div>
+        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+    </section>
+
+    <!-- home section ends  -->
+
+    <!-- service section start -->
+    <section class="service">
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptas!</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-undo"></i>
+                <h3>10 days Replacement</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptas!</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>24 x 7 Support</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptas!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- service section end -->
+
+<!-- product section start -->
+
+<section class="products" id="products">
+    <h1 class="heading">latest <span>products</span></h1>
+
+    <div class="box-container">
+        <div class="box">
+        <div class="icons">
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-share"></a>
+            <a href="" class="fas fa-eye"></a>
+        
+        </div>
+        <img src="images/product-1.png" alt="">    
+        <div class="content">
+            <h3>Nike Shoe</h3>
+            <div class="price">$120.99 <span>150.99</span> </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
     </div>
-<script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+        <div class="box">
+        <div class="icons">
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-share"></a>
+            <a href="" class="fas fa-eye"></a>
+        
+        </div>
+        <img src="images/product-2.png" alt="">    
+        <div class="content">
+            <h3>Nike Shoe</h3>
+            <div class="price">$120.99 <span>150.99</span> </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+        <div class="box">
+        <div class="icons">
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-share"></a>
+            <a href="" class="fas fa-eye"></a>
+        
+        </div>
+        <img src="images/product-3.png" alt="">    
+        <div class="content">
+            <h3>Nike Shoe</h3>
+            <div class="price">$120.99 <span>150.99</span> </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+        <div class="box">
+        <div class="icons">
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-share"></a>
+            <a href="" class="fas fa-eye"></a>
+        
+        </div>
+        <img src="images/product-4.png" alt="">    
+        <div class="content">
+            <h3>Nike Shoe</h3>
+            <div class="price">$120.99 <span>150.99</span> </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+        <div class="box">
+        <div class="icons">
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-share"></a>
+            <a href="" class="fas fa-eye"></a>
+        
+        </div>
+        <img src="images/product-5.png" alt="">    
+        <div class="content">
+            <h3>Nike Shoe</h3>
+            <div class="price">$120.99 <span>150.99</span> </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+        <div class="box">
+        <div class="icons">
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-share"></a>
+            <a href="" class="fas fa-eye"></a>
+        
+        </div>
+        <img src="images/product-6.png" alt="">    
+        <div class="content">
+            <h3>Nike Shoe</h3>
+            <div class="price">$120.99 <span>150.99</span> </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+    </div>
+</section>
+<!-- product section end -->
+
+<!-- Featured section start -->
+
+<!-- <section class="featured" id="featured">
+    <h1 class="heading">Featured<span>Products</span></h1>
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="images/f-img-1.1.png"class="featured-image-1" alt="">
+                <img src="images/f-img-1.2.png"class="featured-image-1" alt="">
+                <img src="images/f-img-1.3.png"class="featured-image-1" alt="">
+                <img src="images/f-img-1.4.png"class="featured-image-1" alt="">
+            </div>
+            <div class="big-image">
+                
+                <img src="images/f-img-1.1.png"class="big-image-1" alt="">
+            </div>
+            <div class="content">
+                <h3>new nike airmax shoes</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium architecto, veniam natus ut non nisi ea dolore quisquam itaque eos?</p>
+                <div class="price">$80.99 <span>$120.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="images/f-img-2.1.png"class="featured-image-2" alt="">
+                <img src="images/f-img-2.2.png"class="featured-image-2" alt="">
+                <img src="images/f-img-2.3.png"class="featured-image-2" alt="">
+                <img src="images/f-img-2.4.png"class="featured-image-2" alt="">
+            </div>
+            <div class="big-image">
+                
+                <img src="images/f-img-2.1.png"class="big-image-2" alt="">
+            </div>
+            <div class="content">
+                <h3>new nike airmax shoes</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium architecto, veniam natus ut non nisi ea dolore quisquam itaque eos?</p>
+                <div class="price">$80.99 <span>$120.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="images/f-img-3.1.png"class="featured-image-3" alt="">
+                <img src="images/f-img-3.2.png"class="featured-image-3" alt="">
+                <img src="images/f-img-3.3.png"class="featured-image-3" alt="">
+                <img src="images/f-img-3.4.png"class="featured-image-3" alt="">
+            </div>
+            <div class="big-image">
+                
+                <img src="images/f-img-3.1.png"class="big-image-3" alt="">
+            </div>
+            <div class="content">
+                <h3>new nike airmax shoes</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium architecto, veniam natus ut non nisi ea dolore quisquam itaque eos?</p>
+                <div class="price">$80.99 <span>$120.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</section> -->
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>featured</span> products </h1>
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="images/f-img-1.1.png" class="featured-image-1" alt="">
+                <img src="images/f-img-1.2.png" class="featured-image-1" alt="">
+                <img src="images/f-img-1.3.png" class="featured-image-1" alt="">
+                <img src="images/f-img-1.4.png" class="featured-image-1" alt="">
+            </div>
+            <div class="big-image">
+                <img src="images/f-img-1.1.png" class="big-image-1" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>new nike airmax shoes</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta facilis praesentium odit voluptas illum iure libero quis fuga commodi. Autem.</p>
+            <div class="price">$80.99 <span>$120.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="images/f-img-2.1.png" class="featured-image-2" alt="">
+                <img src="images/f-img-2.2.png" class="featured-image-2" alt="">
+                <img src="images/f-img-2.3.png" class="featured-image-2" alt="">
+                <img src="images/f-img-2.4.png" class="featured-image-2" alt="">
+            </div>
+            <div class="big-image">
+                <img src="images/f-img-2.1.png" class="big-image-2" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>new nike airmax shoes</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta facilis praesentium odit voluptas illum iure libero quis fuga commodi. Autem.</p>
+            <div class="price">$80.99 <span>$120.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="images/f-img-3.1.png" class="featured-image-3" alt="">
+                <img src="images/f-img-3.2.png" class="featured-image-3" alt="">
+                <img src="images/f-img-3.3.png" class="featured-image-3" alt="">
+                <img src="images/f-img-3.4.png" class="featured-image-3" alt="">
+            </div>
+            <div class="big-image">
+                <img src="images/f-img-3.1.png" class="big-image-3" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>new nike airmax shoes</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta facilis praesentium odit voluptas illum iure libero quis fuga commodi. Autem.</p>
+            <div class="price">$80.99 <span>$120.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+    </div>
+
+</section>
+<!-- Featured section end -->
+
+<!-- review section start -->
+
+<section class="review" id="review">
+    <h1 class="heading">customer's <span>review</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="images/pic1.png" alt="">
+            <h1>Tony stark</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nobis architecto sunt culpa, quo modi nihil, aliquam reprehenderit fugiat, doloremque nulla odit. Doloribus animi culpa consequuntur iure reprehenderit recusandae maiores?</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/pic2.png" alt="">
+            <h1>Tom Holland</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nobis architecto sunt culpa, quo modi nihil, aliquam reprehenderit fugiat, doloremque nulla odit. Doloribus animi culpa consequuntur iure reprehenderit recusandae maiores?</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/pic3.png" alt="">
+            <h1>Hawk Eye</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nobis architecto sunt culpa, quo modi nihil, aliquam reprehenderit fugiat, doloremque nulla odit. Doloribus animi culpa consequuntur iure reprehenderit recusandae maiores?</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- review section end -->
+<!-- newsletter section starts -->
+
+<div class="newsletter">
+    <div class="content">
+        <h3>monthly newsletter  </h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dignissimos non fugiat ea ex cum ipsum laudantium nobis minus voluptatum!</p>
+        <form action="">
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="submit" value="submit" class="btn">
+        </form>
+    </div>
+</div>
+
+<!-- newsletter section ends -->
+<!-- footer section start -->
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Our stores</h3>
+            <a href="">USA</a>
+            <a href="">India</a>
+            <a href="">japan</a>
+            <a href="">paris</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#products">products</a>
+            <a href="#featured">featured</a>
+            <a href="#review">review</a>
+        </div>
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="">my account</a>
+            <a href="">my favorite</a>
+            <a href="">my orders</a>
+            <a href="">newsletter</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="">facebook</a>
+            <a href="">twitter</a>
+            <a href="">instagram</a>
+            <a href="">linkedin</a>
+        </div>
+        <div class="credit">created <span>Saiff devv</span>| all rights reserved |</div>
+    </div>
+</section>
+
+<!-- footer section start -->
 
 
+
+
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
